@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>پایتون‌یار | تمرین و اجرای آنلاین پایتون</title>
+<meta name="description" content="۵۰ تمرین الگوریتمی پایتون با ادیتور رنگی شبیه VS Code و اجرای واقعی کد در مرورگر">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <button id="menuBtn" class="btn menu-btn" aria-label="فهرست تمرین‌ها">☰</button>
+  <a class="brand" href="#" aria-label="parsa1-net"><img src="images/logo.png" alt="Parsa1-net"></a>
+  <div class="logo">🐍 پایتون‌یار</div>
+  <div class="grow"></div>
+  <div class="stat">امتیاز: <b id="score">0</b></div>
+  <button id="userBtn" class="btn">ورود / ثبت‌نام</button>
+</header>
+
+<main>
+  <aside>
+    <div id="filters" class="tabs"></div>
+    <ul id="list"></ul>
+  </aside>
+
+  <section>
+    <div id="problem" class="card"></div>
+
+    <div class="bar">
+      <button id="run" class="btn go">▶ اجرا</button>
+      <button id="test" class="btn ok">✔ ارسال و بررسی</button>
+      <button id="stop" class="btn">■ توقف</button>
+      <button id="reset" class="btn">↺ بازنشانی</button>
+      <span id="status"></span>
+    </div>
+
+    <div class="editor" dir="ltr">
+      <div class="tab-title">main.py</div>
+      <div class="body">
+        <div id="gutter"></div>
+        <div class="wrap">
+          <pre id="hl" aria-hidden="true"></pre>
+          <textarea id="code" spellcheck="false" wrap="off" autocapitalize="off" autocomplete="off" aria-label="ویرایشگر کد پایتون"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="io">
+      <div><h4>ورودی (برای input() — هر خط یک مقدار)</h4><textarea id="stdin" dir="ltr" spellcheck="false"></textarea></div>
+      <div><h4>خروجی</h4><pre id="out" dir="auto"></pre></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fbrand"><img src="images/logo.png" alt="Parsa1-net"><span dir="ltr">© <b>parsa1-net</b> · ۲۰۲۶</span></div>
+  <span>ارتباط با من:</span>
+  <a href="mailto:parsasaadati1387@gmail.com" dir="ltr">parsasaadati1387@gmail.com</a>
+  <a href="https://t.me/psj_2000" target="_blank" rel="noopener" dir="ltr">Telegram: @psj_2000</a>
+</footer>
+
+<div id="modal" hidden></div>
+<script src="js/exercises.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
