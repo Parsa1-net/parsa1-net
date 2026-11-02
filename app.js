@@ -120,7 +120,7 @@ const status = t => $('#status').textContent = t;
 function busy(b) { $('#run').disabled = $('#test').disabled = b; $('#stop').disabled = !b; }
 function boot() {
   ready = false; busy(true); $('#stop').disabled = true; status('در حال بارگذاری مفسر پایتون… (بار اول چند ثانیه طول می‌کشد)');
-  W = new Worker('js/worker.js');
+  W = new Worker('worker.js');
   W.onmessage = ({ data: d }) => {
     if (d.type === 'ready') { ready = true; busy(false); status('پایتون آماده است ✓'); }
     else if (d.type === 'status') status(d.text);
